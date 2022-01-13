@@ -1,8 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Info = () => {
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
+
+  // useEffect(() => {
+  //   console.log("렌더링이 완료되었습니다!");
+  //   console.log({
+  //     name,
+  //     nickname,
+  //   });
+  // });
+
+  // useEffect(() => {
+  //   console.log("마운트될 때만 실행됩니다.");
+  // }, []);
+
+  useEffect(() => {
+    console.log("effect");
+    return () => {
+      console.log("unmount");
+    };
+  }, []);
+
+  // useEffect(() => {
+  //   console.log("effect");
+  //   console.log(name); // name이 업데이트될 때만 실행됩니다.
+  //   return () => {
+  //     console.log("cleanup");
+  //     console.log(name);
+  //   };
+  // }, [name]);
 
   const onChangeName = (e) => {
     setName(e.target.value);
