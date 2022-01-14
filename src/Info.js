@@ -2,7 +2,7 @@ import { useEffect, useState, useReducer } from "react";
 
 function reducer(state, action) {
   return {
-    ...state,
+    ...state, // 전개연산자: 배열 또는 객체를 하나하나 넘기는 용도로 사용된다.
     [action.name]: action.value,
   };
 }
