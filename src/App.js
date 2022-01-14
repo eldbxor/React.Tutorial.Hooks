@@ -20,7 +20,7 @@ import { useState } from "react";
 // };
 
 const App = () => {
-  return <Counter />;
+  return <Info />;
 };
 
 export default App;
